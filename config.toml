@@ -1,0 +1,56 @@
+# The website of the freemapper suite (docs/superpowers/specs/2026-11-15-website-design.md in freemapper).
+base_url = "https://henryjobst.github.io/freemapper-site"
+title = "freemapper"
+description = "Orientierungslaufkarten aus offenen Geodaten: freemapper, freemapper-courseplan und freemapper-print."
+default_language = "de"
+compile_sass = false
+build_search_index = false
+minify_html = true
+generate_feeds = false
+
+[markdown]
+smart_punctuation = false
+external_links_target_blank = false
+external_links_no_referrer = true
+
+[link_checker]
+skip_anchor_prefixes = ["https://github.com/"]
+
+[extra]
+github = "https://github.com/HenryJobst"
+# A preview on github.io is not indexed; the domain freemapper.de turns this off (step 2).
+preview = true
+
+[translations]
+lang_name = "Deutsch"
+other_lang = "English"
+skip = "Zum Inhalt"
+nav_programs = "Programme"
+nav_examples = "Beispiele"
+nav_manual = "Handbuch"
+nav_download = "Herunterladen"
+footer_credit = "freemapper – github.com/HenryJobst/freemapper"
+footer_licence = "Freie Software unter AGPL-3.0-or-later"
+imprint = "Impressum"
+privacy = "Datenschutz"
+font_credit = "Schrift: Inter von Rasmus Andersson, SIL Open Font License"
+
+[languages.en]
+title = "freemapper"
+description = "Orienteering maps from open geodata: freemapper, freemapper-courseplan and freemapper-print."
+generate_feeds = false
+build_search_index = false
+
+[languages.en.translations]
+lang_name = "English"
+other_lang = "Deutsch"
+skip = "Skip to content"
+nav_programs = "Programs"
+nav_examples = "Examples"
+nav_manual = "Manual"
+nav_download = "Download"
+footer_credit = "freemapper – github.com/HenryJobst/freemapper"
+footer_licence = "Free software under AGPL-3.0-or-later"
+imprint = "Legal notice"
+privacy = "Privacy"
+font_credit = "Typeface: Inter by Rasmus Andersson, SIL Open Font License"

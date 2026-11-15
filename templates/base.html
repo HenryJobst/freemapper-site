@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- if page is defined %}{% set current = page %}{% else %}{% set current = section %}{% endif %}
+<title>{% if current.title and current.path != "/" and current.path != "/en/" %}{{ current.title }} · {% endif %}freemapper</title>
+<meta name="description" content="{% if current.description %}{{ current.description }}{% else %}{{ config.description }}{% endif %}">
+{%- if config.extra.preview %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<link rel="canonical" href="{{ current.permalink }}">
+{%- for t in current.translations %}
+<link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink }}">
+{%- endfor %}
+<link rel="preload" href="{{ get_url(path='fonts/InterVariable.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ get_url(path='css/site.css', cachebust=true) }}">
+<link rel="icon" href="{{ get_url(path='favicon.svg') }}" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">{{ trans(key="skip", lang=lang) }}</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="{{ get_url(path='@/_index.md', lang=lang) }}"><img src="{{ get_url(path='favicon.svg') }}" alt="" width="28" height="28">freemapper</a>
+    <nav aria-label="{{ trans(key='nav_programs', lang=lang) }}">
+      <a href="{{ get_url(path='@/_index.md', lang=lang) }}#programme">{{ trans(key="nav_programs", lang=lang) }}</a>
+      <a href="{{ config.extra.github }}/freemapper/blob/main/examples/{% if lang == 'en' %}README.en.md{% else %}README.md{% endif %}">{{ trans(key="nav_examples", lang=lang) }}</a>
+      <a href="{{ config.extra.github }}/freemapper/blob/main/docs/manual/{{ lang }}.md">{{ trans(key="nav_manual", lang=lang) }}</a>
+      <a class="button" href="{{ config.extra.github }}/freemapper/releases/latest">{{ trans(key="nav_download", lang=lang) }}</a>
+    </nav>
+    {%- for t in current.translations %}{% if t.lang != lang %}
+    <a class="lang" href="{{ t.permalink }}" hreflang="{{ t.lang }}" lang="{{ t.lang }}">{{ trans(key="other_lang", lang=lang) }}</a>
+    {%- endif %}{% endfor %}
+  </div>
+</header>
+<main id="main">
+{% block content %}{% endblock content %}
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>{{ trans(key="footer_credit", lang=lang) }} · {{ trans(key="footer_licence", lang=lang) }}</p>
+    <p>
+      <a href="{{ get_url(path='@/impressum.md', lang=lang) }}">{{ trans(key="imprint", lang=lang) }}</a> ·
+      <a href="{{ get_url(path='@/datenschutz.md', lang=lang) }}">{{ trans(key="privacy", lang=lang) }}</a> ·
+      <a href="{{ config.extra.github }}">GitHub</a>
+    </p>
+    <p class="small">{{ trans(key="font_credit", lang=lang) }}</p>
+  </div>
+</footer>
+</body>
+</html>
