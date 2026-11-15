@@ -160,3 +160,26 @@ footer.site a { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* Program pages */
+.program { padding-top: 3rem; padding-bottom: 3.5rem; }
+.program-head { max-width: 46rem; margin-bottom: 2rem; }
+.kicker { color: var(--accent); font-weight: 600; margin: 0 0 0.25rem; }
+.program-head .links { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; margin-top: 1.5rem; }
+.prose { max-width: 46rem; }
+.prose h2 { margin-top: 2.5rem; }
+.prose li { margin-bottom: 0.35rem; }
+.prose table, .downloads { width: 100%; margin: 1rem 0; font-size: 0.95rem; }
+.prose th, .prose td, .downloads th, .downloads td { text-align: left; padding: 0.45rem 0.75rem 0.45rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.downloads .num { text-align: right; white-space: nowrap; padding-right: 1.25rem; }
+.downloads thead th { color: var(--muted); font-weight: 600; font-size: 0.85rem; }
+.downloads tbody th { font-weight: 600; white-space: nowrap; }
+.hash { font-size: 0.72rem; color: var(--muted); word-break: break-all; }
+pre { background: var(--bar); border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1rem; overflow-x: auto; line-height: 1.45; }
+:not(pre) > code { background: var(--bar); padding: 0.05rem 0.3rem; border-radius: 4px; }
+.download { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 52rem) {
+  .downloads thead th:nth-child(4), .downloads td:nth-child(4) { display: none; }
+  .downloads td a { word-break: break-all; }
+}

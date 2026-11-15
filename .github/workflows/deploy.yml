@@ -32,6 +32,10 @@ jobs:
           echo "${ZOLA_SHA256}  ${archive}" | sha256sum -c -
           tar -xzf "${archive}" -C /usr/local/bin zola
           zola --version
+      - name: Fetch the releases
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: scripts/fetch-releases.sh
       - name: Build
         run: zola build
       - name: Check internal links

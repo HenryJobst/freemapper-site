@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+{% set repo = page.extra.repo %}
+{% set r = load_data(path="data/releases/" ~ repo ~ ".json") %}
+{% set gh = config.extra.github ~ "/" ~ repo %}
+{% set platforms = ["windows-x86_64", "macos-arm64", "macos-x86_64", "linux-x86_64", "linux-arm64"] %}
+{% if lang == "en" %}{% set date_format = "d MMMM y" %}{% set locale = "en_GB" %}{% else %}{% set date_format = "d. MMMM y" %}{% set locale = "de_DE" %}{% endif %}
+<article class="wrap program">
+  <header class="program-head">
+    <p class="kicker">{{ page.extra.role }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lead">{{ page.extra.lead }}</p>
+    <p class="links">
+      <a class="button" href="#download">{{ trans(key="download_button", lang=lang) }} {{ r.tag }}</a>
+      <a href="{{ gh }}/blob/main/docs/manual/{{ lang }}.md">{{ trans(key="nav_manual", lang=lang) }}</a>
+      <a href="{{ gh }}/blob/main/{% if lang == 'en' %}CHANGELOG.en.md{% else %}CHANGELOG.md{% endif %}">{{ trans(key="changes", lang=lang) }}</a>
+      <a href="{{ gh }}">{{ trans(key="source", lang=lang) }}</a>
+    </p>
+  </header>
+
+  <div class="prose">
+    {{ page.content | safe }}
+  </div>
+
+  <section id="download" class="download">
+    <h2>{{ trans(key="download_title", lang=lang) }}</h2>
+    <p>{{ trans(key="download_version", lang=lang) }} <a href="{{ r.url }}">{{ r.tag }}</a>, {{ r.date | date(format=date_format, locale=locale) }}.</p>
+    <table class="downloads">
+      <thead><tr><th>{{ trans(key="system", lang=lang) }}</th><th>{{ trans(key="file", lang=lang) }}</th><th class="num">{{ trans(key="size", lang=lang) }}</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      {%- for p in platforms %}
+        {%- set needle = "-" ~ p ~ "." %}
+        {%- for a in r.assets %}{% if needle in a.name %}
+        <tr>
+          <th scope="row">{{ trans(key="plat_" ~ p, lang=lang) }}</th>
+          <td><a href="{{ a.url }}">{{ a.name }}</a></td>
+          <td class="num">{{ (a.size / 1000000) | round | int }} MB</td>
+          <td><code class="hash">{{ a.sha256 }}</code></td>
+        </tr>
+        {%- endif %}{% endfor %}
+      {%- endfor %}
+      </tbody>
+    </table>
+    <p class="note">{{ trans(key="download_note", lang=lang) }} <a href="{{ gh }}/releases">{{ trans(key="all_releases", lang=lang) }}</a></p>
+  </section>
+</article>
+{% endblock content %}

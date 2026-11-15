@@ -7,7 +7,7 @@
       <h1>{{ section.title }}</h1>
       <p class="lead">{{ x.lead }}</p>
       <p class="actions">
-        <a class="button" href="{{ config.extra.github }}/freemapper/releases/latest">{{ x.cta_download }}</a>
+        <a class="button" href="{{ get_url(path='@/freemapper.md', lang=lang) }}#download">{{ x.cta_download }}</a>
         <a class="button secondary" href="{{ x.examples_url }}">{{ x.cta_examples }}</a>
       </p>
     </div>
@@ -30,7 +30,7 @@
   <div class="cards">
     {%- for p in x.programs %}
     <article class="card">
-      <h3><a href="{{ config.extra.github }}/{{ p.repo }}">{{ p.repo }}</a></h3>
+      <h3><a href="{{ get_url(path='@/' ~ p.repo ~ '.md', lang=lang) }}">{{ p.repo }}</a></h3>
       <p class="role">{{ p.role }}</p>
       <p>{{ p.text }}</p>
       {%- if p.state %}<p class="state">{{ p.state }}</p>{% endif %}
