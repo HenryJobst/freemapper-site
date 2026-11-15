@@ -1,5 +1,5 @@
 # The website of the freemapper suite (docs/superpowers/specs/2026-11-15-website-design.md in freemapper).
-base_url = "https://henryjobst.github.io/freemapper-site"
+base_url = "https://freemapper.de"
 title = "freemapper"
 description = "Orientierungslaufkarten aus offenen Geodaten: freemapper, freemapper-courseplan und freemapper-print."
 default_language = "de"
@@ -18,8 +18,8 @@ skip_anchor_prefixes = ["https://github.com/"]
 
 [extra]
 github = "https://github.com/HenryJobst"
-# A preview on github.io is not indexed; the domain freemapper.de turns this off (step 2).
-preview = true
+# A preview is not indexed (noindex); on freemapper.de it is off.
+preview = false
 
 [translations]
 lang_name = "Deutsch"
