@@ -2,4 +2,7 @@
 /data/releases/
 /data/examples.json
 /static/examples/
+/static/handbuch-bilder/
 /vendor/
+/content/handbuch/freemapper*/
+/content/aenderungen/freemapper*.md

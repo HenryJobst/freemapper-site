@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% set gh = config.extra.github ~ "/" ~ section.extra.repo %}
+<article class="wrap manual">
+  <p class="crumbs"><a href="{{ get_url(path='@/handbuch/_index.md', lang=lang) }}">{{ trans(key="nav_manual", lang=lang) }}</a> › {{ section.extra.repo }}</p>
+  <h1>{{ section.title }}</h1>
+  <p class="meta">{{ trans(key="manual_version", lang=lang) }} {{ section.extra.tag }} · <a href="{{ gh }}/blob/{{ section.extra.tag }}/docs/manual/{{ lang }}.md">{{ trans(key="manual_source", lang=lang) }}</a></p>
+  <div class="prose">{{ section.content | safe }}</div>
+  <h2>{{ trans(key="manual_chapters", lang=lang) }}</h2>
+  <ol class="chapters">
+    {%- for p in section.pages %}
+    <li><a href="{{ p.permalink }}">{{ p.title }}</a></li>
+    {%- endfor %}
+  </ol>
+</article>
+{% endblock content %}

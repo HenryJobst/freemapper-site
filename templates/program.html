@@ -12,8 +12,8 @@
     <p class="lead">{{ page.extra.lead }}</p>
     <p class="links">
       <a class="button" href="#download">{{ trans(key="download_button", lang=lang) }} {{ r.tag }}</a>
-      <a href="{{ gh }}/blob/main/docs/manual/{{ lang }}.md">{{ trans(key="nav_manual", lang=lang) }}</a>
-      <a href="{{ gh }}/blob/main/{% if lang == 'en' %}CHANGELOG.en.md{% else %}CHANGELOG.md{% endif %}">{{ trans(key="changes", lang=lang) }}</a>
+      <a href="{{ get_url(path='@/handbuch/' ~ repo ~ '/_index.md', lang=lang) }}">{{ trans(key="nav_manual", lang=lang) }}</a>
+      <a href="{{ get_url(path='@/aenderungen/' ~ repo ~ '.md', lang=lang) }}">{{ trans(key="changes", lang=lang) }}</a>
       <a href="{{ gh }}">{{ trans(key="source", lang=lang) }}</a>
     </p>
   </header>

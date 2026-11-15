@@ -142,7 +142,7 @@ header.site .button { padding: 0.4rem 0.9rem; }
 .note { color: var(--muted); }
 
 /* Text pages */
-.prose { max-width: 46rem; padding-top: 3rem; padding-bottom: 3.5rem; }
+article.prose { max-width: 46rem; padding-top: 3rem; padding-bottom: 3.5rem; }
 
 /* Footer */
 footer.site { border-top: 1px solid var(--line); background: var(--bar); color: var(--muted); font-size: 0.9rem; padding: 1.75rem 0; }
@@ -196,3 +196,28 @@ pre { background: var(--bar); border: 1px solid var(--line); border-radius: 8px;
 .example .state { color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.15rem; }
 .example .counts { font-size: 0.82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .example .pdfs { margin-top: auto; padding-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; font-size: 0.9rem; }
+
+/* Manuals and changes */
+.manual { padding-top: 2.5rem; padding-bottom: 3.5rem; min-width: 0; }
+.manual-grid { display: grid; grid-template-columns: 16rem minmax(0, 1fr); gap: 3rem; align-items: start; }
+.manual-nav { position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow-y: auto; padding-top: 2.5rem; font-size: 0.9rem; }
+.manual-nav p { font-weight: 700; margin: 0 0 0.5rem; }
+.manual-nav p a { color: var(--fg); text-decoration: none; }
+.manual-nav ol { margin: 0; padding-left: 1.4rem; }
+.manual-nav li { margin: 0.3rem 0; color: var(--muted); }
+.manual-nav a { color: var(--muted); text-decoration: none; }
+.manual-nav a:hover { color: var(--accent); }
+.manual-nav li[aria-current] a { color: var(--accent); font-weight: 600; }
+.crumbs { font-size: 0.9rem; color: var(--muted); margin: 0 0 0.75rem; }
+.crumbs a { color: var(--muted); }
+.meta { font-size: 0.85rem; color: var(--muted); }
+.manual .prose { max-width: 48rem; }
+.manual .prose img { max-width: 100%; height: auto; border-radius: 6px; }
+.manual .prose blockquote { margin: 1rem 0; padding: 0.25rem 1rem; border-left: 3px solid var(--accent); color: var(--muted); }
+.chapters li { margin: 0.4rem 0; }
+.pager { display: flex; justify-content: space-between; gap: 1rem; margin: 3rem 0 1rem; padding-top: 1.25rem; border-top: 1px solid var(--line); font-size: 0.95rem; }
+
+@media (max-width: 60rem) {
+  .manual-grid { grid-template-columns: 1fr; gap: 0; }
+  .manual-nav { position: static; max-height: none; padding-top: 1.5rem; border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
+}

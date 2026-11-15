@@ -31,8 +31,8 @@ lead = "freemapper macht aus den offenen Geodaten eines Bundeslandes und aus Ope
 | Wald | ISOM 2017-2 | 1:15 000, 1:10 000 oder 1:7500 |
 
 freemapper kennt fünfzehn Bundesländer, alle außer Thüringen. Wie gut die Karte wird, hängt von den Daten des
-Bundeslandes ab; das [Handbuch](https://github.com/HenryJobst/freemapper/blob/main/docs/manual/de.md) nennt sie für
-jedes einzeln, die [Beispiele](https://github.com/HenryJobst/freemapper/blob/main/examples/README.md) zeigen je
+Bundeslandes ab; das [Handbuch](@/handbuch/freemapper/_index.md) nennt sie für
+jedes einzeln, die [Beispiele](@/beispiele.md) zeigen je
 eine Sprint- und eine Waldkarte.
 
 ## Installieren
