@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+{% set suffix = "" %}{% if lang == "en" %}{% set suffix = ".en" %}{% endif %}
+{% set s = get_section(path="handbuch/" ~ page.extra.repo ~ "/_index" ~ suffix ~ ".md") %}
+{% set gh = config.extra.github ~ "/" ~ page.extra.repo %}
+<div class="wrap manual-grid">
+  <nav class="manual-nav" aria-label="{{ trans(key='manual_chapters', lang=lang) }}">
+    <p><a href="{{ s.permalink }}">{{ s.title }}</a></p>
+    <ol>
+      {%- for p in s.pages %}
+      <li{% if p.permalink == page.permalink %} aria-current="page"{% endif %}><a href="{{ p.permalink }}">{{ p.title }}</a></li>
+      {%- endfor %}
+    </ol>
+  </nav>
+  <article class="manual">
+    <p class="crumbs"><a href="{{ get_url(path='@/handbuch/_index.md', lang=lang) }}">{{ trans(key="nav_manual", lang=lang) }}</a> › <a href="{{ s.permalink }}">{{ page.extra.repo }}</a></p>
+    <h1>{{ page.extra.number }}. {{ page.title }}</h1>
+    <div class="prose">{{ page.content | safe }}</div>
+    <nav class="pager">
+      {%- if page.lower %}<a href="{{ page.lower.permalink }}">← {{ page.lower.title }}</a>{% else %}<span></span>{% endif %}
+      {%- if page.higher %}<a href="{{ page.higher.permalink }}">{{ page.higher.title }} →</a>{% endif %}
+    </nav>
+    <p class="meta">{{ trans(key="manual_version", lang=lang) }} {{ page.extra.tag }} · <a href="{{ gh }}/blob/{{ page.extra.tag }}/docs/manual/{{ lang }}.md">{{ trans(key="manual_source", lang=lang) }}</a></p>
+  </article>
+</div>
+{% endblock content %}

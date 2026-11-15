@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% set gh = config.extra.github ~ "/" ~ page.extra.repo %}
+<article class="wrap manual">
+  <p class="crumbs"><a href="{{ get_url(path='@/aenderungen/_index.md', lang=lang) }}">{{ trans(key="changes", lang=lang) }}</a> › {{ page.extra.repo }}</p>
+  <h1>{{ trans(key="changes", lang=lang) }}: {{ page.extra.repo }}</h1>
+  <p class="meta">{{ trans(key="manual_version", lang=lang) }} {{ page.extra.tag }} · <a href="{{ gh }}/blob/{{ page.extra.tag }}/{% if lang == 'en' %}CHANGELOG.en.md{% else %}CHANGELOG.md{% endif %}">{{ trans(key="manual_source", lang=lang) }}</a></p>
+  <div class="prose">{{ page.content | safe }}</div>
+</article>
+{% endblock content %}

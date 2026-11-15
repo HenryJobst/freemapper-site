@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="wrap manual">
+  <h1>{{ section.title }}</h1>
+  <div class="prose">{{ section.content | safe }}</div>
+  <div class="cards">
+    {%- for repo in ["freemapper", "freemapper-courseplan", "freemapper-print"] %}
+    {%- if section.extra.kind == "manual" %}
+      {%- if lang == "en" %}{% set suffix = ".en" %}{% else %}{% set suffix = "" %}{% endif %}
+      {%- set target = get_section(path="handbuch/" ~ repo ~ "/_index" ~ suffix ~ ".md") %}
+      {%- set url = target.permalink %}{% set count = target.pages | length %}
+    {%- else %}
+      {%- set url = get_url(path="@/aenderungen/" ~ repo ~ ".md", lang=lang) %}{% set count = 0 %}
+    {%- endif %}
+    <article class="card">
+      <h3><a href="{{ url }}">{{ repo }}</a></h3>
+      {%- if count > 0 %}<p class="state">{{ count }} {{ trans(key="manual_chapter_count", lang=lang) }}</p>{% endif %}
+    </article>
+    {%- endfor %}
+  </div>
+</article>
+{% endblock content %}

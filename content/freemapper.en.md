@@ -31,8 +31,8 @@ lead = "freemapper turns the open geodata of a German state and OpenStreetMap in
 | Forest | ISOM 2017-2 | 1:15 000, 1:10 000 or 1:7500 |
 
 freemapper knows fifteen German states, all except Thuringia. How good the map gets depends on the data of the state;
-the [manual](https://github.com/HenryJobst/freemapper/blob/main/docs/manual/en.md) names them for each, the
-[examples](https://github.com/HenryJobst/freemapper/blob/main/examples/README.en.md) show a sprint and a forest map
+the [manual](@/handbuch/freemapper/_index.en.md) names them for each, the
+[examples](@/beispiele.en.md) show a sprint and a forest map
 for each.
 
 ## Install
