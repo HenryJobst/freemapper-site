@@ -24,7 +24,7 @@
     <a class="brand" href="{{ get_url(path='@/_index.md', lang=lang) }}"><img src="{{ get_url(path='favicon.svg') }}" alt="" width="28" height="28">freemapper</a>
     <nav aria-label="{{ trans(key='nav_programs', lang=lang) }}">
       <a href="{{ get_url(path='@/_index.md', lang=lang) }}#programme">{{ trans(key="nav_programs", lang=lang) }}</a>
-      <a href="{{ config.extra.github }}/freemapper/blob/main/examples/{% if lang == 'en' %}README.en.md{% else %}README.md{% endif %}">{{ trans(key="nav_examples", lang=lang) }}</a>
+      <a href="{{ get_url(path='@/beispiele.md', lang=lang) }}">{{ trans(key="nav_examples", lang=lang) }}</a>
       <a href="{{ config.extra.github }}/freemapper/blob/main/docs/manual/{{ lang }}.md">{{ trans(key="nav_manual", lang=lang) }}</a>
       <a class="button" href="{{ get_url(path='@/freemapper.md', lang=lang) }}#download">{{ trans(key="nav_download", lang=lang) }}</a>
     </nav>
