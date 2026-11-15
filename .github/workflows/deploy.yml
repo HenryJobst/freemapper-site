@@ -36,6 +36,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: scripts/fetch-releases.sh
+      - name: Fetch the examples
+        run: scripts/fetch-examples.sh
       - name: Build
         run: zola build
       - name: Check internal links

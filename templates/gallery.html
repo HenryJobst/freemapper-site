@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+{% set data = load_data(path="data/examples.json") %}
+{% set src = config.extra.github ~ "/freemapper/blob/main/examples/" %}
+<article class="wrap gallery">
+  <header class="program-head">
+    <h1>{{ page.title }}</h1>
+    {{ page.content | safe }}
+  </header>
+  {%- for kind in ["sprint", "forest"] %}
+  <section id="{{ kind }}">
+    <h2>{{ trans(key="examples_" ~ kind, lang=lang) }}</h2>
+    <div class="examples">
+      {%- for e in data[kind] %}
+      {%- set t = e[lang] %}
+      <article class="example">
+        <a class="thumb" href="{{ get_url(path='examples/' ~ e.dir ~ '/preview.webp') }}">
+          <img src="{{ get_url(path='examples/' ~ e.dir ~ '/preview-thumb.webp') }}" alt="{{ trans(key='examples_alt', lang=lang) }} {{ t.title }}" loading="lazy" width="480" height="470">
+        </a>
+        <div class="example-text">
+          <p class="state">{{ t.state }}</p>
+          <h3>{{ t.title }}</h3>
+          <p>{{ t.desc }}</p>
+          <p class="counts">{{ e.objects }} {{ trans(key="examples_objects", lang=lang) }} · {{ e.candidates }} {{ trans(key="examples_candidates", lang=lang) }} · {{ e.symbols }} {{ trans(key="examples_symbols", lang=lang) }}</p>
+          <p class="pdfs">
+            {%- for p in e.pdfs %}
+            <a href="{{ src }}{{ e.dir }}/{{ p.file }}">{{ trans(key="examples_pdf_" ~ p.kind, lang=lang) }}</a>
+            {%- endfor %}
+            <a href="{{ src }}{{ e.dir }}">{{ trans(key="examples_project", lang=lang) }}</a>
+          </p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endfor %}
+</article>
+{% endblock content %}
