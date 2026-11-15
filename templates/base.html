@@ -26,7 +26,7 @@
       <a href="{{ get_url(path='@/_index.md', lang=lang) }}#programme">{{ trans(key="nav_programs", lang=lang) }}</a>
       <a href="{{ config.extra.github }}/freemapper/blob/main/examples/{% if lang == 'en' %}README.en.md{% else %}README.md{% endif %}">{{ trans(key="nav_examples", lang=lang) }}</a>
       <a href="{{ config.extra.github }}/freemapper/blob/main/docs/manual/{{ lang }}.md">{{ trans(key="nav_manual", lang=lang) }}</a>
-      <a class="button" href="{{ config.extra.github }}/freemapper/releases/latest">{{ trans(key="nav_download", lang=lang) }}</a>
+      <a class="button" href="{{ get_url(path='@/freemapper.md', lang=lang) }}#download">{{ trans(key="nav_download", lang=lang) }}</a>
     </nav>
     {%- for t in current.translations %}{% if t.lang != lang %}
     <a class="lang" href="{{ t.permalink }}" hreflang="{{ t.lang }}" lang="{{ t.lang }}">{{ trans(key="other_lang", lang=lang) }}</a>
