@@ -5,5 +5,5 @@ template = "docs-index.html"
 kind = "manual"
 +++
 
-Die Handbücher der drei Programme, jeweils zur neuesten Version. Sie erklären Schritt für Schritt, was die Programme
-tun, was in den Dateien steht und was zu tun ist, wenn etwas nicht klappt.
+Die Handbücher der drei Programme, jeweils zur neuesten Version. Sie erklären Schritt für Schritt, wie man mit den
+Programmen arbeitet und was bei einer Fehlermeldung zu tun ist.

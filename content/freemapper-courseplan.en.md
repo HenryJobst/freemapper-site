@@ -11,13 +11,13 @@ lead = "freemapper-courseplan is the course-setting program of the suite: you se
 
 ## What it does
 
-- **Controls, courses and special objects** in the editor on the map: start, finish, controls with code and
+- Controls, courses and special objects in the editor on the map: start, finish, controls with code and
   description, bends, marked routes and out-of-bounds areas.
-- **Checks by the German competition rules of 2026**, such as control distances, sharp angles and enough different
+- Checks by the German competition rules of 2026, such as control distances, sharp angles and enough different
   first controls, each with its source and with reasoned exceptions (`check`).
-- **Purple Pen both ways**: import, export and sync, so both programs can be used side by side.
-- **IOF XML 3.0** for the results software.
-- **Score courses** with point values, time limit and suggested control sites.
+- Purple Pen both ways: import, export and sync, so both programs can be used side by side.
+- IOF XML 3.0 for the results software.
+- Score courses with point values, time limit and suggested control sites.
 
 The courses are printed with [freemapper-print](@/freemapper-print.en.md).
 

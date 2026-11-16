@@ -11,12 +11,12 @@ lead = "freemapper-print turns a finished orienteering map and the courses from 
 
 ## What it makes
 
-- **The map at exact print scale** as a vector PDF, on A4, A3 or a page size of your own, also at another scale with
+- The map at exact print scale as a vector PDF, on A4, A3 or a page size of your own, also at another scale with
   the symbol sizes the norm asks for, such as 1:3000 for the youngest classes.
-- **One sheet per course** with the course overprint in purple and the control descriptions, from Purple Pen
+- One sheet per course with the course overprint in purple and the control descriptions, from Purple Pen
   (`.ppen`) or from any program that writes IOF XML 3.0 (Condes, OCAD).
-- **Control numbers** that keep clear of legs, circles and the map's symbols; `check` suggests a better place.
-- **The sheet around it**: frame, title block, club and sponsor logos, north lines, a check distance to measure, and
+- Control numbers that keep clear of legs, circles and the map's symbols; `check` suggests a better place.
+- The sheet around it: frame, title block, club and sponsor logos, north lines, a check distance to measure, and
   the map's credit lines.
 
 ## Install

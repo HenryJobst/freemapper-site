@@ -9,10 +9,10 @@ cta_examples = "See the examples"
 examples_url = "https://github.com/HenryJobst/freemapper/blob/main/examples/README.en.md"
 image_alt = "Training map of Viktoriapark in Berlin-Kreuzberg: buildings grey, park areas yellow and white, private ground olive green, paths and stairs, contours brown"
 image_caption = "Training map of Viktoriapark, Berlin-Kreuzberg, sprint 1:4000. freemapper made it from open data; click for the PDF to print."
-programs_title = "Three programs, one workflow"
+programs_title = "How the programs work together"
 steps = [
   "freemapper makes the starting point of the map from the data of the state.",
-  "Mapping goes on in OpenOrienteering Mapper or OCAD, with an eye on the terrain.",
+  "Mapping goes on in OpenOrienteering Mapper or OCAD and in the terrain.",
   "freemapper-courseplan sets the courses on the finished map.",
   "freemapper-print prints one map sheet per course.",
 ]
@@ -25,8 +25,8 @@ states = [
 ]
 states_missing = "Thuringia has no data sources yet."
 ai_title = "With an AI assistant"
-ai_text = "An AI assistant such as Claude or Codex can install and run freemapper, from the command line or as an MCP server. You say which map you need and for which place; the assistant does the rest. Its instructions are in [AGENTS.md](https://github.com/HenryJobst/freemapper/blob/main/AGENTS.md)."
-free_title = "Free and open"
+ai_text = "An AI assistant such as Claude or Codex can install and run freemapper, from the command line or as an MCP server. You say which map you need and for which place; the assistant sets up the project and makes the map. Its instructions are in [AGENTS.md](https://github.com/HenryJobst/freemapper/blob/main/AGENTS.md)."
+free_title = "Free software"
 free_text = "All programs are free software under the AGPL-3.0-or-later; the source is on [GitHub](https://github.com/HenryJobst). The maps carry the credit lines the data licences require. Keep them when you pass a map on."
 
 [[extra.programs]]

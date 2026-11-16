@@ -11,15 +11,15 @@ lead = "freemapper macht aus den offenen Geodaten eines Bundeslandes und aus Ope
 
 ## Was es macht
 
-- **Eine georeferenzierte Karte** für OpenOrienteering Mapper (`.omap`), auf Wunsch auch für OCAD. Gebäude, befestigte
+- Eine georeferenzierte Karte für OpenOrienteering Mapper (`.omap`), auf Wunsch auch für OCAD. Gebäude, befestigte
   Flächen, Wege, Treppen, Mauern, Gewässer und andere verlässliche Objekte sind schon gezeichnet.
-- **Vorlagen** zum Kartieren: Luftbild, Schummerung, Hangneigung, lokales Relief und die Höhe der Vegetation.
-- **Kandidaten**: Was unsicher ist (Stadtmobiliar, viele Wege, Böschungen und Kuppen aus dem Gelände, Sperrgebiete),
-  liegt in einer eigenen Karte zum Prüfen gegen das Luftbild und im Gelände. Der Prüfausdruck zeichnet alle
+- Vorlagen zum Kartieren: Luftbild, Schummerung, Hangneigung, lokales Relief und die Höhe der Vegetation.
+- Was unsicher ist (Stadtmobiliar, viele Wege, Böschungen und Kuppen aus dem Gelände, Sperrgebiete), liegt als
+  Kandidat in einer eigenen Karte zum Prüfen gegen das Luftbild und im Gelände. Der Prüfausdruck zeichnet alle
   Kandidaten lagetreu.
-- **Eine Trainingskarte** zum Drucken und Laufen, wie sie ist: Karte und Kandidaten zusammen, so aufgeräumt, dass
+- Eine Trainingskarte zum Drucken und Laufen, wie sie ist: Karte und Kandidaten zusammen, so aufgeräumt, dass
   kein Symbol auf einem anderen liegt.
-- **Hinweise zu Genehmigungen**: Kreis, Gemeinde, Schutzgebiete, Naturdenkmale, Denkmale, Wald und Forstverwaltung
+- Hinweise zu Genehmigungen: Kreis, Gemeinde, Schutzgebiete, Naturdenkmale, Denkmale, Wald und Forstverwaltung
   im Kartengebiet und wen man vor einer Veranstaltung meist fragt. Ein Hinweis, keine Rechtsauskunft.
 
 ## Kartenarten
@@ -40,11 +40,11 @@ eine Sprint- und eine Waldkarte.
 Unten das Archiv für Ihr System herunterladen und auspacken. Im Ordner liegt das Programm `freemapper`
 (unter Windows `freemapper.exe`) mit Handbuch und Lizenz.
 
-- **macOS** startet ein Programm aus dem Internet erst, wenn die Quarantäne-Markierung weg ist:
+- macOS startet ein Programm aus dem Internet erst, wenn die Quarantäne-Markierung weg ist:
   `xattr -d com.apple.quarantine freemapper`
-- **Windows** zeigt beim ersten Start „Der Computer wurde durch Windows geschützt“: *Weitere Informationen* →
+- Windows zeigt beim ersten Start „Der Computer wurde durch Windows geschützt“: *Weitere Informationen* →
   *Trotzdem ausführen*.
-- **Linux**: Die Programme laufen auf jeder Distribution.
+- Unter Linux läuft freemapper auf jeder Distribution.
 
 `freemapper --version` zeigt, ob alles geklappt hat. Später holt `freemapper update` die neueste Version.
 

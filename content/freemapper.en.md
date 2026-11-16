@@ -11,15 +11,15 @@ lead = "freemapper turns the open geodata of a German state and OpenStreetMap in
 
 ## What it makes
 
-- **A georeferenced map** for OpenOrienteering Mapper (`.omap`), on request also for OCAD. Buildings, paved areas,
+- A georeferenced map for OpenOrienteering Mapper (`.omap`), on request also for OCAD. Buildings, paved areas,
   paths, stairs, walls, water and other reliable objects are drawn already.
-- **Templates** for mapping: aerial photo, hillshade, slope, local relief and the height of the vegetation.
-- **Candidates**: what is uncertain (street furniture, many paths, banks and knolls from the terrain, out-of-bounds
-  areas) is in a map of its own, to check against the aerial photo and in the terrain. The check print draws every
+- Templates for mapping: aerial photo, hillshade, slope, local relief and the height of the vegetation.
+- What is uncertain (street furniture, many paths, banks and knolls from the terrain, out-of-bounds areas) comes
+  as candidates in a map of its own, to check against the aerial photo and in the terrain. The check print draws every
   candidate true to position.
-- **A training map** to print and run on as it is: map and candidates together, cleaned up so that no symbol lies on
+- A training map to print and run on as it is: map and candidates together, cleaned up so that no symbol lies on
   another.
-- **Permit notes**: Kreis, municipality, protected areas, natural monuments, monuments, forest and forest office in
+- Permit notes: Kreis, municipality, protected areas, natural monuments, monuments, forest and forest office in
   the map area, and whom one usually asks before an event. A hint, not legal advice.
 
 ## Map kinds
@@ -40,10 +40,10 @@ for each.
 Download the archive for your system below and unpack it. The folder holds the program `freemapper` (on Windows
 `freemapper.exe`) with the manual and the licence.
 
-- **macOS** starts a program from the internet only once the quarantine flag is gone:
+- macOS starts a program from the internet only once the quarantine flag is gone:
   `xattr -d com.apple.quarantine freemapper`
-- **Windows** shows "Windows protected your PC" on the first start: *More info* → *Run anyway*.
-- **Linux**: the programs run on any distribution.
+- Windows shows "Windows protected your PC" on the first start: *More info* → *Run anyway*.
+- On Linux, freemapper runs on any distribution.
 
 `freemapper --version` shows that it worked. Later, `freemapper update` fetches the newest version.
 
