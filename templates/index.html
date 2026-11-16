@@ -29,11 +29,13 @@
   </ol>
   <div class="cards">
     {%- for p in x.programs %}
-    <article class="card">
-      <h3><a href="{{ get_url(path='@/' ~ p.repo ~ '.md', lang=lang) }}">{{ p.repo }}</a></h3>
+    {%- set url = get_url(path='@/' ~ p.repo ~ '.md', lang=lang) %}
+    <article class="card linked">
+      <h3>{{ p.repo }}</h3>
       <p class="role">{{ p.role }}</p>
       <p>{{ p.text }}</p>
       {%- if p.state %}<p class="state">{{ p.state }}</p>{% endif %}
+      <p class="more"><a href="{{ url }}">{{ trans(key="card_more", lang=lang) }} {{ p.repo }} <span aria-hidden="true">→</span></a></p>
     </article>
     {%- endfor %}
   </div>

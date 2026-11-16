@@ -135,7 +135,14 @@ header.site .button { padding: 0.4rem 0.9rem; }
 .card h3 a:hover { color: var(--accent); }
 .card .role { margin: 0 0 0.75rem; color: var(--accent); font-weight: 600; }
 .card p { margin: 0 0 0.75rem; }
-.card .state { font-size: 0.875rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 0.6rem; margin: 0; }
+.card .state { font-size: 0.875rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 0.6rem; margin: 0 0 0.75rem; }
+/* A card whose "more" link covers the whole card: the card is one target, the link text says where it goes. */
+.card.linked { position: relative; display: flex; flex-direction: column; transition: border-color 0.15s, box-shadow 0.15s; }
+.card.linked:hover, .card.linked:focus-within { border-color: var(--accent); box-shadow: 0 6px 20px rgb(0 0 0 / 0.12); }
+.card .more { margin: auto 0 0; padding-top: 0.5rem; font-weight: 600; }
+.card .more a { text-decoration: none; }
+.card .more a::after { content: ""; position: absolute; inset: 0; border-radius: 10px; }
+.card.linked:hover .more a { text-decoration: underline; }
 
 .states { list-style: none; padding: 0; margin: 1.25rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .states li { border: 1px solid var(--line); border-radius: 999px; padding: 0.2rem 0.8rem; background: var(--card); font-size: 0.95rem; }
