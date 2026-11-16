@@ -11,10 +11,10 @@ image_alt = "Training map of Viktoriapark in Berlin-Kreuzberg: buildings grey, p
 image_caption = "Training map of Viktoriapark, Berlin-Kreuzberg, sprint 1:4000. freemapper made it from open data; click for the PDF to print."
 programs_title = "How the programs work together"
 steps = [
-  "freemapper makes the starting point of the map from the data of the state.",
-  "Mapping goes on in OpenOrienteering Mapper or OCAD and in the terrain.",
-  "freemapper-courseplan sets the courses on the finished map.",
-  "freemapper-print prints one map sheet per course.",
+  { repo = "freemapper", text = "makes the starting point of the map from the data of the state." },
+  { text = "Mapping goes on in OpenOrienteering Mapper or OCAD and in the terrain." },
+  { repo = "freemapper-courseplan", text = "sets the courses on the finished map." },
+  { repo = "freemapper-print", text = "prints one map sheet per course." },
 ]
 states_title = "For which places?"
 states_text = "freemapper knows the open geodata of fifteen German states: buildings and land use from the cadastre, terrain model, aerial photos and surface model. OpenStreetMap comes on top."

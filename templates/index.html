@@ -24,7 +24,7 @@
   <h2>{{ x.programs_title }}</h2>
   <ol class="steps">
     {%- for step in x.steps %}
-    <li>{{ step }}</li>
+    <li>{% if step.repo %}<a href="{{ get_url(path='@/' ~ step.repo ~ '.md', lang=lang) }}">{{ step.repo }}</a> {% endif %}{{ step.text }}</li>
     {%- endfor %}
   </ol>
   <div class="cards">

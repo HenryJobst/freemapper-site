@@ -11,10 +11,10 @@ image_alt = "Trainingskarte des Viktoriaparks in Berlin-Kreuzberg: Gebäude grau
 image_caption = "Trainingskarte Viktoriapark, Berlin-Kreuzberg, Sprint 1:4000. freemapper hat sie aus offenen Daten erzeugt; ein Klick öffnet das PDF zum Drucken."
 programs_title = "So arbeiten die Programme zusammen"
 steps = [
-  "freemapper erzeugt aus den Daten des Bundeslandes den Ausgangsstand der Karte.",
-  "Kartiert wird weiter in OpenOrienteering Mapper oder OCAD und im Gelände.",
-  "freemapper-courseplan legt die Bahnen auf der fertigen Karte.",
-  "freemapper-print druckt ein Kartenblatt je Bahn.",
+  { repo = "freemapper", text = "erzeugt aus den Daten des Bundeslandes den Ausgangsstand der Karte." },
+  { text = "Kartiert wird weiter in OpenOrienteering Mapper oder OCAD und im Gelände." },
+  { repo = "freemapper-courseplan", text = "legt die Bahnen auf der fertigen Karte." },
+  { repo = "freemapper-print", text = "druckt ein Kartenblatt je Bahn." },
 ]
 states_title = "Für welche Orte?"
 states_text = "freemapper kennt die offenen Geodaten von fünfzehn Bundesländern: Gebäude und Nutzung aus dem Liegenschaftskataster, Geländemodell, Luftbild und Oberflächenmodell. Dazu kommt OpenStreetMap."
