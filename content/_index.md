@@ -9,10 +9,10 @@ cta_examples = "Beispiele ansehen"
 examples_url = "https://github.com/HenryJobst/freemapper/blob/main/examples/README.md"
 image_alt = "Trainingskarte des Viktoriaparks in Berlin-Kreuzberg: Gebäude grau, Parkflächen gelb und weiß, Privatgelände olivgrün, Wege und Treppen, Höhenlinien braun"
 image_caption = "Trainingskarte Viktoriapark, Berlin-Kreuzberg, Sprint 1:4000. freemapper hat sie aus offenen Daten erzeugt; ein Klick öffnet das PDF zum Drucken."
-programs_title = "Drei Programme, ein Ablauf"
+programs_title = "So arbeiten die Programme zusammen"
 steps = [
   "freemapper erzeugt aus den Daten des Bundeslandes den Ausgangsstand der Karte.",
-  "Kartiert wird weiter in OpenOrienteering Mapper oder OCAD, mit dem Blick ins Gelände.",
+  "Kartiert wird weiter in OpenOrienteering Mapper oder OCAD und im Gelände.",
   "freemapper-courseplan legt die Bahnen auf der fertigen Karte.",
   "freemapper-print druckt ein Kartenblatt je Bahn.",
 ]
@@ -25,8 +25,8 @@ states = [
 ]
 states_missing = "Für Thüringen gibt es noch keine Datenquellen."
 ai_title = "Mit einem KI-Assistenten"
-ai_text = "freemapper lässt sich auch von einem KI-Assistenten wie Claude oder Codex installieren und bedienen, über die Kommandozeile oder als MCP-Server. Man sagt, welche Karte man braucht und für welchen Ort; der Assistent erledigt den Rest. Die Anleitung für den Assistenten steht in [AGENTS.md](https://github.com/HenryJobst/freemapper/blob/main/AGENTS.md)."
-free_title = "Frei und offen"
+ai_text = "freemapper lässt sich auch von einem KI-Assistenten wie Claude oder Codex installieren und bedienen, über die Kommandozeile oder als MCP-Server. Man sagt, welche Karte man braucht und für welchen Ort; der Assistent legt das Projekt an und erzeugt die Karte. Die Anleitung für den Assistenten steht in [AGENTS.md](https://github.com/HenryJobst/freemapper/blob/main/AGENTS.md)."
+free_title = "Freie Software"
 free_text = "Alle Programme sind freie Software unter der AGPL-3.0-or-later, der Quelltext liegt auf [GitHub](https://github.com/HenryJobst). Die Karten tragen die Quellenangaben, die die Lizenzen der Daten verlangen. Behalten Sie sie bei, wenn Sie eine Karte weitergeben."
 
 [[extra.programs]]

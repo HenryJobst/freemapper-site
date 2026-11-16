@@ -11,13 +11,13 @@ lead = "freemapper-print macht aus einer fertigen OL-Karte und den Bahnen aus ei
 
 ## Was es macht
 
-- **Die Karte im exakten Druckmaßstab** als Vektor-PDF, auf A4, A3 oder einer eigenen Seitengröße, auch in einem
+- Die Karte im exakten Druckmaßstab als Vektor-PDF, auf A4, A3 oder einer eigenen Seitengröße, auch in einem
   anderen Maßstab mit den Symbolgrößen der Norm, etwa 1:3000 für die jüngsten Klassen.
-- **Ein Blatt je Bahn** mit dem Bahnaufdruck in Violett und der Postenbeschreibung, aus Purple Pen (`.ppen`) oder
+- Ein Blatt je Bahn mit dem Bahnaufdruck in Violett und der Postenbeschreibung, aus Purple Pen (`.ppen`) oder
   aus jedem Programm, das IOF-XML 3.0 schreibt (Condes, OCAD).
-- **Postennummern**, die Strecken, Kreise und die Symbole der Karte frei lassen; `check` schlägt einen besseren Platz
+- Postennummern, die Strecken, Kreise und die Symbole der Karte frei lassen; `check` schlägt einen besseren Platz
   vor.
-- **Das Blatt drumherum**: Rahmen, Titelblock, Vereins- und Sponsorenlogos, Nordlinien, eine Kontrollstrecke zum
+- Das Blatt drumherum: Rahmen, Titelblock, Vereins- und Sponsorenlogos, Nordlinien, eine Kontrollstrecke zum
   Nachmessen und die Quellenangaben der Karte.
 
 ## Installieren

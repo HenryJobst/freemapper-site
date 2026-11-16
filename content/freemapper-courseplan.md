@@ -11,14 +11,14 @@ lead = "freemapper-courseplan ist das Bahnlegungsprogramm der Suite: Man legt di
 
 ## Was es macht
 
-- **Posten, Bahnen und Sonderobjekte** im Editor auf der Karte: Start, Ziel, Posten mit Code und Beschreibung,
+- Posten, Bahnen und Sonderobjekte im Editor auf der Karte: Start, Ziel, Posten mit Code und Beschreibung,
   Knickpunkte, Pflichtstrecken und Sperrgebiete.
-- **Prüfungen nach den Wettkampfbestimmungen 2026**, etwa Postenabstände, spitze Winkel und genug verschiedene erste
+- Prüfungen nach den Wettkampfbestimmungen 2026, etwa Postenabstände, spitze Winkel und genug verschiedene erste
   Posten, jeweils mit Quelle und mit begründeten Ausnahmen (`check`).
-- **Purple Pen in beide Richtungen**: importieren, exportieren und abgleichen, damit beide Programme nebeneinander
+- Purple Pen in beide Richtungen: importieren, exportieren und abgleichen, damit beide Programme nebeneinander
   nutzbar sind.
-- **IOF-XML 3.0** für die Auswertung.
-- **Score-Bahnen** mit Punktwerten, Zeitlimit und Vorschlägen für Postenstellen.
+- IOF-XML 3.0 für die Auswertung.
+- Score-Bahnen mit Punktwerten, Zeitlimit und Vorschlägen für Postenstellen.
 
 Gedruckt werden die Bahnen mit [freemapper-print](@/freemapper-print.md).
 
