@@ -229,3 +229,6 @@ pre { background: var(--bar); border: 1px solid var(--line); border-radius: 8px;
   .manual-grid { grid-template-columns: 1fr; gap: 0; }
   .manual-nav { position: static; max-height: none; padding-top: 1.5rem; border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
 }
+
+header.site .gh { display: inline-flex; color: var(--fg); }
+header.site .gh:hover { color: var(--accent); }
