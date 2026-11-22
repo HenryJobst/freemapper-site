@@ -43,6 +43,7 @@
 
 <section class="wrap block">
   <h2>{{ x.states_title }}</h2>
+  {% include "status-notice.html" %}
   <p>{{ x.states_text }}</p>
   <ul class="states">
     {%- for s in x.states %}

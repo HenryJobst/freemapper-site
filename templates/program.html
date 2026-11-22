@@ -18,6 +18,7 @@
     </p>
   </header>
 
+  {% if repo == "freemapper" %}{% include "status-notice.html" %}{% endif %}
   <div class="prose">
     {{ page.content | safe }}
   </div>

@@ -38,6 +38,8 @@ jobs:
         run: scripts/fetch-releases.sh
       - name: Fetch the examples
         run: scripts/fetch-examples.sh
+      - name: Fetch the service status
+        run: scripts/fetch-status.sh
       - name: Fetch the manuals and changes
         run: scripts/fetch-docs.sh
       - name: Build
