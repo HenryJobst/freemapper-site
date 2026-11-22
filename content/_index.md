@@ -17,7 +17,7 @@ steps = [
   { repo = "freemapper-print", text = "druckt ein Kartenblatt je Bahn." },
 ]
 states_title = "Für welche Orte?"
-states_text = "freemapper kennt die offenen Geodaten von fünfzehn Bundesländern: Gebäude und Nutzung aus dem Liegenschaftskataster, Geländemodell, Luftbild und Oberflächenmodell. Dazu kommt OpenStreetMap."
+states_text = "freemapper kennt die offenen Geodaten von fünfzehn Bundesländern: Gebäude und Nutzung aus dem Liegenschaftskataster, Geländemodell, Luftbild und Oberflächenmodell. Dazu kommt OpenStreetMap. Außerhalb Deutschlands ist Polen nutzbar: Höhenmodell, Luftbild, Gebäude und Landnutzung von GUGiK, dem Kataster EGiB."
 states = [
   "Baden-Württemberg", "Bayern", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hessen",
   "Mecklenburg-Vorpommern", "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz", "Saarland",

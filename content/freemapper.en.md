@@ -30,7 +30,8 @@ lead = "freemapper turns the open geodata of a German state and OpenStreetMap in
 | Sprint | ISSprOM 2019-2 | 1:4000 or 1:5000 |
 | Forest | ISOM 2017-2 | 1:15 000, 1:10 000 or 1:7500 |
 
-freemapper knows fifteen German states, all except Thuringia. How good the map gets depends on the data of the state;
+freemapper knows fifteen German states, all except Thuringia. Poland is usable too (terrain model, aerial photos, buildings and land use from GUGiK).
+How good the map gets depends on the data of the state;
 the [manual](@/handbuch/freemapper/_index.en.md) names them for each, the
 [examples](@/beispiele.en.md) show a sprint and a forest map
 for each.
