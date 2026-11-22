@@ -1,0 +1,13 @@
+{#- The known outages of the geodata services, from the nightly run of freemapper (issue #286): the states whose
+    services did not answer on two nights in a row. Nothing is shown without an outage or without a status. -#}
+{%- if lang == "en" %}{% set date_format = "d MMMM y" %}{% set locale = "en_GB" %}{% else %}{% set date_format = "d. MMMM y" %}{% set locale = "de_DE" %}{% endif %}
+{%- set status = load_data(path="data/status.json") %}
+{%- if status.down_by_adapter | length > 0 %}
+<aside class="status-notice" role="note">
+  <h2>{{ trans(key="status_title", lang=lang) }}</h2>
+  <p>{{ trans(key="status_before", lang=lang) }}
+    {%- for id, urls in status.down_by_adapter %}{% if not loop.first %}, {% endif %} <strong>{{ trans(key="state_" ~ id, lang=lang) }}</strong>{% endfor %}.
+    {{ trans(key="status_after", lang=lang) }}
+    {%- if status.updated %} {{ trans(key="status_date", lang=lang) }} {{ status.updated | date(format=date_format, locale=locale) }}.{% endif %}</p>
+</aside>
+{%- endif %}

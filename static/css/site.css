@@ -232,3 +232,7 @@ pre { background: var(--bar); border: 1px solid var(--line); border-radius: 8px;
 
 header.site .gh { display: inline-flex; color: var(--fg); }
 header.site .gh:hover { color: var(--accent); }
+
+.status-notice { border: 1px solid var(--line); border-left: 4px solid #b26a00; border-radius: 6px; background: var(--card); padding: 0.75rem 1rem; margin: 1.25rem 0; }
+.status-notice h2 { font-size: 1rem; margin: 0 0 0.25rem; }
+.status-notice p { margin: 0; }

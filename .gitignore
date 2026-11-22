@@ -1,6 +1,7 @@
 /public/
 /data/releases/
 /data/examples.json
+/data/status.json
 /static/examples/
 /static/handbuch-bilder/
 /vendor/
