@@ -17,7 +17,7 @@ steps = [
   { repo = "freemapper-print", text = "prints one map sheet per course." },
 ]
 states_title = "For which places?"
-states_text = "freemapper knows the open geodata of fifteen German states: buildings and land use from the cadastre, terrain model, aerial photos and surface model. OpenStreetMap comes on top."
+states_text = "freemapper knows the open geodata of fifteen German states: buildings and land use from the cadastre, terrain model, aerial photos and surface model. OpenStreetMap comes on top. Outside Germany, Poland is usable: terrain model, aerial photos, buildings and land use from GUGiK, the EGiB cadastre."
 states = [
   "Baden-Württemberg", "Bavaria", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hesse",
   "Lower Saxony", "Mecklenburg-Vorpommern", "North Rhine-Westphalia", "Rhineland-Palatinate", "Saarland",

@@ -30,8 +30,8 @@ lead = "freemapper macht aus den offenen Geodaten eines Bundeslandes und aus Ope
 | Sprint | ISSprOM 2019-2 | 1:4000 oder 1:5000 |
 | Wald | ISOM 2017-2 | 1:15 000, 1:10 000 oder 1:7500 |
 
-freemapper kennt fünfzehn Bundesländer, alle außer Thüringen. Wie gut die Karte wird, hängt von den Daten des
-Bundeslandes ab; das [Handbuch](@/handbuch/freemapper/_index.md) nennt sie für
+freemapper kennt fünfzehn Bundesländer, alle außer Thüringen. Auch Polen ist nutzbar (Höhenmodell, Luftbild, Gebäude und Landnutzung von GUGiK).
+Wie gut die Karte wird, hängt von den Daten des Bundeslandes ab; das [Handbuch](@/handbuch/freemapper/_index.md) nennt sie für
 jedes einzeln, die [Beispiele](@/beispiele.md) zeigen je
 eine Sprint- und eine Waldkarte.
 
