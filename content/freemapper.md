@@ -33,7 +33,12 @@ lead = "freemapper macht aus den offenen Geodaten eines Bundeslandes und aus Ope
 freemapper kennt fünfzehn Bundesländer, alle außer Thüringen. Auch Polen ist nutzbar (Höhenmodell, Luftbild, Gebäude und Landnutzung von GUGiK).
 Wie gut die Karte wird, hängt von den Daten des Bundeslandes ab; das [Handbuch](@/handbuch/freemapper/_index.md) nennt sie für
 jedes einzeln, die [Beispiele](@/beispiele.md) zeigen je
-eine Sprint- und eine Waldkarte.
+eine Sprint- und eine Waldkarte, auch für Polen.
+
+Die Programmtexte gibt es auf Deutsch, Englisch und Polnisch und in 18 weiteren Sprachen (Tschechisch, Dänisch, Spanisch,
+Estnisch, Finnisch, Französisch, Ungarisch, Italienisch, Litauisch, Lettisch, Norwegisch, Niederländisch, Portugiesisch,
+Russisch, Slowakisch, Slowenisch, Schwedisch und Ukrainisch). Diese sind maschinell entworfen und nicht von
+Muttersprachlern gelesen. Die Sprache stellt man mit `--lang` oder `FREEMAPPER_LANG` ein.
 
 ## Installieren
 
