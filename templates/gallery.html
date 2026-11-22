@@ -7,9 +7,10 @@
     <h1>{{ page.title }}</h1>
     {{ page.content | safe }}
   </header>
-  {%- for kind in ["sprint", "forest"] %}
+  {%- for kind in ["sprint", "forest", "international"] %}
   <section id="{{ kind }}">
     <h2>{{ trans(key="examples_" ~ kind, lang=lang) }}</h2>
+    {%- if kind == "international" %}<p>{{ trans(key="examples_international_text", lang=lang) }}</p>{% endif %}
     <div class="examples">
       {%- for e in data[kind] %}
       {%- set t = e[lang] %}
@@ -18,7 +19,7 @@
           <img src="{{ get_url(path='examples/' ~ e.dir ~ '/preview-thumb.webp') }}" alt="{{ trans(key='examples_alt', lang=lang) }} {{ t.title }}" loading="lazy" width="480" height="470">
         </a>
         <div class="example-text">
-          <p class="state">{{ t.state }}</p>
+          <p class="state">{{ t.state }}{% if e.kind %} · {{ trans(key="examples_kind_" ~ e.kind, lang=lang) }}{% endif %}</p>
           <h3>{{ t.title }}</h3>
           <p>{{ t.desc }}</p>
           <p class="counts">{{ e.objects }} {{ trans(key="examples_objects", lang=lang) }} · {{ e.candidates }} {{ trans(key="examples_candidates", lang=lang) }} · {{ e.symbols }} {{ trans(key="examples_symbols", lang=lang) }}</p>

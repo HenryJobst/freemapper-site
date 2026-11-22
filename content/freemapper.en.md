@@ -34,7 +34,12 @@ freemapper knows fifteen German states, all except Thuringia. Poland is usable t
 How good the map gets depends on the data of the state;
 the [manual](@/handbuch/freemapper/_index.en.md) names them for each, the
 [examples](@/beispiele.en.md) show a sprint and a forest map
-for each.
+for each, and one for Poland.
+
+The program texts come in German, English and Polish and in 18 more languages (Czech, Danish, Spanish, Estonian,
+Finnish, French, Hungarian, Italian, Lithuanian, Latvian, Norwegian, Dutch, Portuguese, Russian, Slovak, Slovenian,
+Swedish and Ukrainian). These are machine-drafted and not read by native speakers. Set the language with `--lang` or
+`FREEMAPPER_LANG`.
 
 ## Install
 
