@@ -125,6 +125,12 @@ def main() -> None:
         for name in ("preview.webp", "preview-thumb.webp"):
             shutil.copyfile(examples / a["dir"] / name, target / name)
     data["international"] = intl
+    layers = examples / "berlin-viktoriapark" / "layers"
+    if layers.is_dir():
+        target = out_images / "berlin-viktoriapark" / "layers"
+        target.mkdir(parents=True, exist_ok=True)
+        for image in layers.glob("*.webp"):
+            shutil.copyfile(image, target / image.name)
     out_json.parent.mkdir(parents=True, exist_ok=True)
     out_json.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"examples: {len(data['sprint'])} sprint, {len(data['forest'])} forest, {len(intl)} international")

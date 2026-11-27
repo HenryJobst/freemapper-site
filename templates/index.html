@@ -20,6 +20,29 @@
   </div>
 </section>
 
+<section id="ebenen" class="wrap block layers">
+  <h2>{{ trans(key="layers_title", lang=lang) }}</h2>
+  <p>{{ trans(key="layers_text", lang=lang) }}</p>
+  {%- set base = "examples/berlin-viktoriapark/layers/" %}
+  {%- set candidates = ["candidates-terrain", "candidates-water", "candidates-vegetation", "candidates-paths", "candidates-barriers", "candidates-features", "candidates-out-of-bounds"] %}
+  {%- set raster = ["orthophoto", "hillshade", "slope", "relief", "ndsm", "k5"] %}
+  {%- for group in ["candidates", "templates"] %}
+  {%- set names = candidates %}{% if group == "templates" %}{% set names = raster %}{% endif %}
+  <h3>{{ trans(key="layers_group_" ~ group, lang=lang) }}</h3>
+  <ul class="layer-grid">
+    {%- for name in names %}
+    {%- set label = trans(key="layer_" ~ name | replace(from="-", to="_"), lang=lang) %}
+    <li>
+      <a href="{{ get_url(path=base ~ name ~ '.webp') }}">
+        <img src="{{ get_url(path=base ~ name ~ '-thumb.webp') }}" width="113" height="113" alt="{{ label }}" loading="lazy">
+      </a>
+      <span>{{ label }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endfor %}
+</section>
+
 <section id="programme" class="wrap block">
   <h2>{{ x.programs_title }}</h2>
   <ol class="steps">

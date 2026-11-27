@@ -8,5 +8,5 @@ src=vendor/freemapper
 rm -rf "$src" static/examples
 git clone -q --depth 1 --filter=blob:none --sparse https://github.com/HenryJobst/freemapper "$src"
 git -C "$src" sparse-checkout set --no-cone '/examples/README.md' '/examples/README.en.md' '/examples/international.md' '/examples/international.en.md' '/examples/*/preview.webp' \
-  '/examples/*/preview-thumb.webp'
+  '/examples/*/preview-thumb.webp' '/examples/berlin-viktoriapark/layers/*.webp'
 python3 scripts/examples.py "$src/examples" data/examples.json static/examples
