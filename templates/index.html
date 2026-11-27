@@ -34,7 +34,7 @@
     {%- set label = trans(key="layer_" ~ name | replace(from="-", to="_"), lang=lang) %}
     <li>
       <a href="{{ get_url(path=base ~ name ~ '.webp') }}">
-        <img src="{{ get_url(path=base ~ name ~ '-thumb.webp') }}" width="113" height="113" alt="{{ label }}" loading="lazy">
+        <img src="{{ get_url(path=base ~ name ~ '-thumb.webp') }}" width="151" height="151" alt="{{ label }}" loading="lazy">
       </a>
       <span>{{ label }}</span>
     </li>
