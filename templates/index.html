@@ -26,8 +26,8 @@
   {%- set base = "examples/berlin-viktoriapark/layers/" %}
   {%- set candidates = ["candidates-terrain", "candidates-water", "candidates-vegetation", "candidates-paths", "candidates-barriers", "candidates-features", "candidates-out-of-bounds"] %}
   {%- set raster = ["orthophoto", "hillshade", "slope", "relief", "ndsm", "k5"] %}
-  {%- for group in ["candidates", "templates"] %}
-  {%- set names = candidates %}{% if group == "templates" %}{% set names = raster %}{% endif %}
+  {%- for group in ["base", "candidates", "templates"] %}
+  {%- set names = candidates %}{% if group == "templates" %}{% set names = raster %}{% elif group == "base" %}{% set names = ["map"] %}{% endif %}
   <h3>{{ trans(key="layers_group_" ~ group, lang=lang) }}</h3>
   <ul class="layer-grid">
     {%- for name in names %}
