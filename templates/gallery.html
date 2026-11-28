@@ -27,6 +27,7 @@
             {%- for p in e.pdfs %}
             <a href="{{ src }}{{ e.dir }}/{{ p.file }}">{{ trans(key="examples_pdf_" ~ p.kind, lang=lang) }}</a>
             {%- endfor %}
+            <a href="{{ src }}{{ e.dir }}/{% if lang == 'en' %}layers.en.md{% else %}layers.md{% endif %}">{{ trans(key="examples_layers", lang=lang) }}</a>
             <a href="{{ src }}{{ e.dir }}">{{ trans(key="examples_project", lang=lang) }}</a>
           </p>
         </div>
